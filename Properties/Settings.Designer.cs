@@ -70,5 +70,29 @@ namespace ShortWhisper.Properties {
                 this["Language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowPopup {
+            get {
+                return ((bool)(this["ShowPopup"]));
+            }
+            set {
+                this["ShowPopup"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool PasteImmediately {
+            get {
+                return ((bool)(this["PasteImmediately"]));
+            }
+            set {
+                this["PasteImmediately"] = value;
+            }
+        }
     }
 }

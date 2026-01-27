@@ -66,8 +66,8 @@ namespace ShortWhisper
             var resp = client.PostAsync($"http://localhost:{Settings.Default.ServerPort}/inference", formData).Result;
             var content = resp.Content.ReadAsStringAsync().Result;
             Clipboard.SetText(Regex.Replace(content, "\\s+", " ").Trim());
-            SendKeys.Send("^{v}");
-            new NotificationForm().Show();
+            if (Settings.Default.PasteImmediately) SendKeys.Send("^{v}");
+            if (Settings.Default.ShowPopup) new NotificationForm().Show();
             _waveFileStream = null;
             Close();
         }

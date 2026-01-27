@@ -37,6 +37,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.langTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.popupTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pasteTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // serverPathTextBox
@@ -105,7 +109,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 246);
+            this.button1.Location = new System.Drawing.Point(12, 361);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -113,11 +117,47 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 237);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(175, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Show popup (near notification area)";
+            // 
+            // popupTextBox
+            // 
+            this.popupTextBox.Location = new System.Drawing.Point(12, 253);
+            this.popupTextBox.Name = "popupTextBox";
+            this.popupTextBox.Size = new System.Drawing.Size(402, 20);
+            this.popupTextBox.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 289);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(148, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Paste immediately (send keys)";
+            // 
+            // pasteTextBox
+            // 
+            this.pasteTextBox.Location = new System.Drawing.Point(12, 305);
+            this.pasteTextBox.Name = "pasteTextBox";
+            this.pasteTextBox.Size = new System.Drawing.Size(402, 20);
+            this.pasteTextBox.TabIndex = 11;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 281);
+            this.ClientSize = new System.Drawing.Size(441, 396);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pasteTextBox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.popupTextBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.langTextBox);
@@ -145,5 +185,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox langTextBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox popupTextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox pasteTextBox;
     }
 }
