@@ -6,6 +6,8 @@ namespace ShortWhisper
 {
     public partial class NotificationForm : Form
     {
+        protected override bool ShowWithoutActivation => true;
+
         public NotificationForm()
         {
             InitializeComponent();
