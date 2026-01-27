@@ -1,6 +1,7 @@
 ﻿using NAudio.Wave;
 using ShortWhisper.Properties;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Net.Http;
 using System.Text.RegularExpressions;
@@ -21,6 +22,14 @@ namespace ShortWhisper
         public MainForm()
         {
             InitializeComponent();
+
+            var cursor = Cursor.Position;
+
+            StartPosition = FormStartPosition.Manual;
+            Location = new Point(
+                cursor.X - 92,
+                cursor.Y - 30
+            );
             TopMost = true;
             ShowInTaskbar = false;
             FormBorderStyle = FormBorderStyle.None;
