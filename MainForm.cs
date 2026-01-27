@@ -74,7 +74,6 @@ namespace ShortWhisper
             _waveIn.DataAvailable -= WaveIn_DataAvailable;
             _waveIn.RecordingStopped -= WaveIn_RecordingStopped;
             _waveIn.StopRecording();
-            _waveFileStream.Close();
             File.Delete(_filePath);
         }
     }
