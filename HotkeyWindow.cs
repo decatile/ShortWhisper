@@ -28,6 +28,7 @@ namespace ShortWhisper
             if (m.Msg == WM_HOTKEY)
             {
                 _onHotkey();
+                return;
             }
             base.WndProc(ref m);
         }

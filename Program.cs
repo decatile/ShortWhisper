@@ -17,13 +17,13 @@ namespace ShortWhisper
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            new HotkeyWindow(() => { new MainForm().Show(); });
+            var hotkey = new HotkeyWindow(() => new MainForm().Show());
 
             var trayIcon = new NotifyIcon
             {
                 Icon = SystemIcons.Application,
                 Visible = true,
-                Text = "Short Whisper is working",
+                Text = "ShortWhisper is working",
                 ContextMenuStrip = new ContextMenuStrip()
             };
             trayIcon.MouseClick += (a, b) => { if (b.Button == MouseButtons.Left) new MainForm().Show(); };
@@ -33,7 +33,11 @@ namespace ShortWhisper
 
             WhisperController.Start();
 
-            Application.ApplicationExit += (a, b) => WhisperController.Kill();
+            Application.ApplicationExit += (a, b) =>
+            {
+                hotkey.Dispose();
+                WhisperController.Kill();
+            };
 
             Application.Run();
         }
