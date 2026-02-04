@@ -1,4 +1,4 @@
-﻿namespace ShortWhisper
+﻿namespace DesktopWhisper
 {
     partial class NotificationForm
     {

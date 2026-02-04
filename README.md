@@ -1,10 +1,10 @@
-﻿# ShortWhisper
+﻿# Desktop Whisper
 
 A WinForms application for Windows designed to simplify interaction with ggml-org/whisper.cpp/whisper-server.
 
 ## What can it do for you?
 
-ShortWhisper lets you start recording with a single click on the tray icon or via the Win+Alt+P shortcut.
+Desktop Whisper lets you start recording with a single click on the tray icon or via the Win+Alt+P shortcut.
 
 ![](./images/tray-menu.png)
 
@@ -22,4 +22,4 @@ After saving, you usually need to restart the whisper-server (tray icon → **Re
 
 ## Design
 
-ShortWhisper is a background service that spawns its own whisper-server instance. This allows them to be managed together, simplifying interaction. It might be worth adding support for using an external server in the future.
+Desktop Whisper is a background service that spawns its own whisper-server instance. This allows them to be managed together, simplifying interaction. It might be worth adding support for using an external server in the future.

@@ -1,9 +1,9 @@
-﻿using ShortWhisper.Properties;
+﻿using DesktopWhisper.Properties;
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace ShortWhisper
+namespace DesktopWhisper
 {
     internal class WhisperController
     {

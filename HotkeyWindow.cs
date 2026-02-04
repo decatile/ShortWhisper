@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace ShortWhisper
+namespace DesktopWhisper
 {
     internal class HotkeyWindow : NativeWindow, IDisposable
     {

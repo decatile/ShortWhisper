@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ShortWhisper
+namespace DesktopWhisper
 {
     public partial class NotificationForm : Form
     {

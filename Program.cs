@@ -1,10 +1,10 @@
-﻿using ShortWhisper.Properties;
+﻿using DesktopWhisper.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ShortWhisper
+namespace DesktopWhisper
 {
     internal static class Program
     {
@@ -23,7 +23,7 @@ namespace ShortWhisper
             {
                 Icon = SystemIcons.Application,
                 Visible = true,
-                Text = "ShortWhisper is working",
+                Text = "Desktop Whisper is working",
                 ContextMenuStrip = new ContextMenuStrip()
             };
             trayIcon.MouseClick += (a, b) => { if (b.Button == MouseButtons.Left) new MainForm().Show(); };

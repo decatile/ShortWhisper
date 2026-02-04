@@ -1,4 +1,4 @@
-﻿namespace ShortWhisper
+﻿namespace DesktopWhisper
 {
     partial class SettingsForm
     {
@@ -168,7 +168,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.serverPathTextBox);
             this.Name = "SettingsForm";
-            this.Text = "ShortWhisper: Settings";
+            this.Text = "Settings";
             this.ResumeLayout(false);
             this.PerformLayout();
 

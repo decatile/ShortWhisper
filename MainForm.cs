@@ -1,5 +1,5 @@
 ﻿using NAudio.Wave;
-using ShortWhisper.Properties;
+using DesktopWhisper.Properties;
 using System;
 using System.Drawing;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace ShortWhisper
+namespace DesktopWhisper
 {
     public partial class MainForm : Form
     {

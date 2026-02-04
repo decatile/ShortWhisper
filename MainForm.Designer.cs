@@ -1,4 +1,4 @@
-﻿namespace ShortWhisper
+﻿namespace DesktopWhisper
 {
     partial class MainForm
     {
@@ -61,7 +61,7 @@
             this.Controls.Add(this.button1);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ShortWhisper";
+            this.Text = "Desktop Whisper";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_Closed);
             this.ResumeLayout(false);
 
