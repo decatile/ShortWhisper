@@ -6,6 +6,7 @@ using System.IO;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace DesktopWhisper
 {
@@ -18,6 +19,9 @@ namespace DesktopWhisper
 
         //[DllImport("user32.dll", SetLastError = true)]
         //public static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vlc);
+
+        [DllImport("dwmapi.dll")]
+        public static extern int DwmSetWindowAttribute(IntPtr hWnd, int dwAttribute, ref uint pvAttribute, int cbAttribute);
 
         public MainForm()
         {
@@ -38,6 +42,13 @@ namespace DesktopWhisper
             _waveIn.DataAvailable += WaveIn_DataAvailable;
             _waveIn.RecordingStopped += WaveIn_RecordingStopped;
             _waveIn.StartRecording();
+        }
+
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+            uint preference = 2;
+            DwmSetWindowAttribute(Handle, 33, ref preference, sizeof(uint));
         }
 
         private void WaveIn_DataAvailable(object sender, WaveInEventArgs e)
